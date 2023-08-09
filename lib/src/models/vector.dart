@@ -139,7 +139,7 @@ class Vector extends Node {
   Vector({
     required super.id,
     required super.visible,
-    super.componentPropertyReferencesMap,
+    super.componentPropertyProperties,
     super.name,
     super.rotation,
     super.pluginData,

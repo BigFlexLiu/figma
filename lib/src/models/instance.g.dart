@@ -69,8 +69,8 @@ abstract class _$InstanceCWProxy {
 
   Instance styles(Map<StyleTypeKey, String>? styles);
 
-  Instance componentPropertyReferencesMap(
-      Map<String, String>? componentPropertyReferencesMap);
+  Instance componentPropertyProperties(
+      Map<String, String>? componentPropertyProperties);
 
   Instance absoluteBoundingBox(SizeRectangle? absoluteBoundingBox);
 
@@ -159,7 +159,7 @@ abstract class _$InstanceCWProxy {
     bool? preserveRatio,
     double? layoutGrow,
     Map<StyleTypeKey, String>? styles,
-    Map<String, String>? componentPropertyReferencesMap,
+    Map<String, String>? componentPropertyProperties,
     SizeRectangle? absoluteBoundingBox,
     SizeRectangle? absoluteRenderBounds,
     double? rotation,
@@ -303,9 +303,9 @@ class _$InstanceCWProxyImpl implements _$InstanceCWProxy {
   Instance styles(Map<StyleTypeKey, String>? styles) => this(styles: styles);
 
   @override
-  Instance componentPropertyReferencesMap(
-          Map<String, String>? componentPropertyReferencesMap) =>
-      this(componentPropertyReferencesMap: componentPropertyReferencesMap);
+  Instance componentPropertyProperties(
+          Map<String, String>? componentPropertyProperties) =>
+      this(componentPropertyProperties: componentPropertyProperties);
 
   @override
   Instance absoluteBoundingBox(SizeRectangle? absoluteBoundingBox) =>
@@ -436,7 +436,7 @@ class _$InstanceCWProxyImpl implements _$InstanceCWProxy {
     Object? preserveRatio = const $CopyWithPlaceholder(),
     Object? layoutGrow = const $CopyWithPlaceholder(),
     Object? styles = const $CopyWithPlaceholder(),
-    Object? componentPropertyReferencesMap = const $CopyWithPlaceholder(),
+    Object? componentPropertyProperties = const $CopyWithPlaceholder(),
     Object? absoluteBoundingBox = const $CopyWithPlaceholder(),
     Object? absoluteRenderBounds = const $CopyWithPlaceholder(),
     Object? rotation = const $CopyWithPlaceholder(),
@@ -612,11 +612,11 @@ class _$InstanceCWProxyImpl implements _$InstanceCWProxy {
           ? _value.styles
           // ignore: cast_nullable_to_non_nullable
           : styles as Map<StyleTypeKey, String>?,
-      componentPropertyReferencesMap:
-          componentPropertyReferencesMap == const $CopyWithPlaceholder()
-              ? _value.componentPropertyReferencesMap
+      componentPropertyProperties:
+          componentPropertyProperties == const $CopyWithPlaceholder()
+              ? _value.componentPropertyProperties
               // ignore: cast_nullable_to_non_nullable
-              : componentPropertyReferencesMap as Map<String, String>?,
+              : componentPropertyProperties as Map<String, String>?,
       absoluteBoundingBox: absoluteBoundingBox == const $CopyWithPlaceholder()
           ? _value.absoluteBoundingBox
           // ignore: cast_nullable_to_non_nullable
@@ -800,9 +800,8 @@ Instance _$InstanceFromJson(Map<String, dynamic> json) => Instance(
       styles: (json['styles'] as Map<String, dynamic>?)?.map(
         (k, e) => MapEntry($enumDecode(_$StyleTypeKeyEnumMap, k), e as String),
       ),
-      componentPropertyReferencesMap:
-          (json['componentPropertyReferencesMap'] as Map<String, dynamic>?)
-              ?.map(
+      componentPropertyProperties:
+          (json['componentPropertyProperties'] as Map<String, dynamic>?)?.map(
         (k, e) => MapEntry(k, e as String),
       ),
       absoluteBoundingBox: json['absoluteBoundingBox'] == null
@@ -868,7 +867,7 @@ Map<String, dynamic> _$InstanceToJson(Instance instance) => <String, dynamic>{
       'pluginData': instance.pluginData,
       'sharedPluginData': instance.sharedPluginData,
       'rotation': instance.rotation,
-      'componentPropertyReferencesMap': instance.componentPropertyReferencesMap,
+      'componentPropertyProperties': instance.componentPropertyProperties,
       'children':
           instance.children?.map(const NodeJsonConverter().toJson).toList(),
       'locked': instance.locked,

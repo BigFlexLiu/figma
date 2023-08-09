@@ -38,7 +38,7 @@ class Node extends Equatable {
   /// properties attached to this node. The component property name can be used
   /// to look up more information on the corresponding component's or component
   /// set's componentPropertyDefinitions.
-  final Map<String, String>? componentPropertyReferencesMap;
+  final Map<String, String>? componentPropertyProperties;
 
   Node({
     required this.id,
@@ -48,7 +48,7 @@ class Node extends Equatable {
     this.pluginData,
     this.sharedPluginData,
     this.rotation,
-    this.componentPropertyReferencesMap,
+    this.componentPropertyProperties,
   });
 
   @override
@@ -60,7 +60,7 @@ class Node extends Equatable {
         pluginData,
         sharedPluginData,
         rotation,
-        componentPropertyReferencesMap,
+        componentPropertyProperties,
       ];
 
   factory Node.fromJson(Map<String, dynamic> json) => _$NodeFromJson(json);

@@ -38,7 +38,7 @@ class Slice extends Node {
   Slice({
     required super.id,
     required super.visible,
-    super.componentPropertyReferencesMap,
+    super.componentPropertyProperties,
     super.rotation,
     super.name,
     super.type,

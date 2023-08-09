@@ -40,7 +40,7 @@ class Instance extends Frame {
     required super.preserveRatio,
     required super.layoutGrow,
     super.styles,
-    super.componentPropertyReferencesMap,
+    super.componentPropertyProperties,
     super.absoluteBoundingBox,
     super.absoluteRenderBounds,
     super.rotation,

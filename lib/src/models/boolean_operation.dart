@@ -46,7 +46,7 @@ class BooleanOperation extends Vector {
     required super.strokeJoin,
     required super.strokeDashes,
     required super.strokeMiterAngle,
-    super.componentPropertyReferencesMap,
+    super.componentPropertyProperties,
     super.name,
     super.rotation,
     super.pluginData,

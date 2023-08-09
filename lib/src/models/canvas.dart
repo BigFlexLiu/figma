@@ -33,7 +33,7 @@ class Canvas extends Node {
   Canvas({
     required super.id,
     required super.visible,
-    super.componentPropertyReferencesMap,
+    super.componentPropertyProperties,
     super.name,
     super.rotation,
     super.pluginData,

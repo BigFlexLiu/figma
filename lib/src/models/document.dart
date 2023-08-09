@@ -17,7 +17,7 @@ class Document extends Node {
   Document({
     required super.id,
     required super.visible,
-    super.componentPropertyReferencesMap,
+    super.componentPropertyProperties,
     super.rotation,
     super.type,
     super.name,

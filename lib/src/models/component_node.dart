@@ -41,7 +41,7 @@ class ComponentNode extends Frame {
     required super.size,
     required this.componentPropertyDefinitions,
     super.styles,
-    super.componentPropertyReferencesMap,
+    super.componentPropertyProperties,
     super.absoluteBoundingBox,
     super.absoluteRenderBounds,
     super.rotation,

@@ -11,8 +11,8 @@ abstract class _$DocumentCWProxy {
 
   Document visible(bool visible);
 
-  Document componentPropertyReferencesMap(
-      Map<String, String>? componentPropertyReferencesMap);
+  Document componentPropertyProperties(
+      Map<String, String>? componentPropertyProperties);
 
   Document rotation(double? rotation);
 
@@ -35,7 +35,7 @@ abstract class _$DocumentCWProxy {
   Document call({
     String? id,
     bool? visible,
-    Map<String, String>? componentPropertyReferencesMap,
+    Map<String, String>? componentPropertyProperties,
     double? rotation,
     String? type,
     String? name,
@@ -58,9 +58,9 @@ class _$DocumentCWProxyImpl implements _$DocumentCWProxy {
   Document visible(bool visible) => this(visible: visible);
 
   @override
-  Document componentPropertyReferencesMap(
-          Map<String, String>? componentPropertyReferencesMap) =>
-      this(componentPropertyReferencesMap: componentPropertyReferencesMap);
+  Document componentPropertyProperties(
+          Map<String, String>? componentPropertyProperties) =>
+      this(componentPropertyProperties: componentPropertyProperties);
 
   @override
   Document rotation(double? rotation) => this(rotation: rotation);
@@ -92,7 +92,7 @@ class _$DocumentCWProxyImpl implements _$DocumentCWProxy {
   Document call({
     Object? id = const $CopyWithPlaceholder(),
     Object? visible = const $CopyWithPlaceholder(),
-    Object? componentPropertyReferencesMap = const $CopyWithPlaceholder(),
+    Object? componentPropertyProperties = const $CopyWithPlaceholder(),
     Object? rotation = const $CopyWithPlaceholder(),
     Object? type = const $CopyWithPlaceholder(),
     Object? name = const $CopyWithPlaceholder(),
@@ -109,11 +109,11 @@ class _$DocumentCWProxyImpl implements _$DocumentCWProxy {
           ? _value.visible
           // ignore: cast_nullable_to_non_nullable
           : visible as bool,
-      componentPropertyReferencesMap:
-          componentPropertyReferencesMap == const $CopyWithPlaceholder()
-              ? _value.componentPropertyReferencesMap
+      componentPropertyProperties:
+          componentPropertyProperties == const $CopyWithPlaceholder()
+              ? _value.componentPropertyProperties
               // ignore: cast_nullable_to_non_nullable
-              : componentPropertyReferencesMap as Map<String, String>?,
+              : componentPropertyProperties as Map<String, String>?,
       rotation: rotation == const $CopyWithPlaceholder()
           ? _value.rotation
           // ignore: cast_nullable_to_non_nullable
@@ -157,9 +157,8 @@ extension $DocumentCopyWith on Document {
 Document _$DocumentFromJson(Map<String, dynamic> json) => Document(
       id: json['id'] as String,
       visible: json['visible'] as bool? ?? true,
-      componentPropertyReferencesMap:
-          (json['componentPropertyReferencesMap'] as Map<String, dynamic>?)
-              ?.map(
+      componentPropertyProperties:
+          (json['componentPropertyProperties'] as Map<String, dynamic>?)?.map(
         (k, e) => MapEntry(k, e as String),
       ),
       rotation: (json['rotation'] as num?)?.toDouble(),
@@ -180,7 +179,7 @@ Map<String, dynamic> _$DocumentToJson(Document instance) => <String, dynamic>{
       'pluginData': instance.pluginData,
       'sharedPluginData': instance.sharedPluginData,
       'rotation': instance.rotation,
-      'componentPropertyReferencesMap': instance.componentPropertyReferencesMap,
+      'componentPropertyProperties': instance.componentPropertyProperties,
       'children':
           instance.children?.map(const NodeJsonConverter().toJson).toList(),
     };

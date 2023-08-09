@@ -69,8 +69,8 @@ abstract class _$GroupCWProxy {
 
   Group styles(Map<StyleTypeKey, String>? styles);
 
-  Group componentPropertyReferencesMap(
-      Map<String, String>? componentPropertyReferencesMap);
+  Group componentPropertyProperties(
+      Map<String, String>? componentPropertyProperties);
 
   Group absoluteBoundingBox(SizeRectangle? absoluteBoundingBox);
 
@@ -150,7 +150,7 @@ abstract class _$GroupCWProxy {
     bool? preserveRatio,
     double? layoutGrow,
     Map<StyleTypeKey, String>? styles,
-    Map<String, String>? componentPropertyReferencesMap,
+    Map<String, String>? componentPropertyProperties,
     SizeRectangle? absoluteBoundingBox,
     SizeRectangle? absoluteRenderBounds,
     double? rotation,
@@ -287,9 +287,9 @@ class _$GroupCWProxyImpl implements _$GroupCWProxy {
   Group styles(Map<StyleTypeKey, String>? styles) => this(styles: styles);
 
   @override
-  Group componentPropertyReferencesMap(
-          Map<String, String>? componentPropertyReferencesMap) =>
-      this(componentPropertyReferencesMap: componentPropertyReferencesMap);
+  Group componentPropertyProperties(
+          Map<String, String>? componentPropertyProperties) =>
+      this(componentPropertyProperties: componentPropertyProperties);
 
   @override
   Group absoluteBoundingBox(SizeRectangle? absoluteBoundingBox) =>
@@ -400,7 +400,7 @@ class _$GroupCWProxyImpl implements _$GroupCWProxy {
     Object? preserveRatio = const $CopyWithPlaceholder(),
     Object? layoutGrow = const $CopyWithPlaceholder(),
     Object? styles = const $CopyWithPlaceholder(),
-    Object? componentPropertyReferencesMap = const $CopyWithPlaceholder(),
+    Object? componentPropertyProperties = const $CopyWithPlaceholder(),
     Object? absoluteBoundingBox = const $CopyWithPlaceholder(),
     Object? absoluteRenderBounds = const $CopyWithPlaceholder(),
     Object? rotation = const $CopyWithPlaceholder(),
@@ -572,11 +572,11 @@ class _$GroupCWProxyImpl implements _$GroupCWProxy {
           ? _value.styles
           // ignore: cast_nullable_to_non_nullable
           : styles as Map<StyleTypeKey, String>?,
-      componentPropertyReferencesMap:
-          componentPropertyReferencesMap == const $CopyWithPlaceholder()
-              ? _value.componentPropertyReferencesMap
+      componentPropertyProperties:
+          componentPropertyProperties == const $CopyWithPlaceholder()
+              ? _value.componentPropertyProperties
               // ignore: cast_nullable_to_non_nullable
-              : componentPropertyReferencesMap as Map<String, String>?,
+              : componentPropertyProperties as Map<String, String>?,
       absoluteBoundingBox: absoluteBoundingBox == const $CopyWithPlaceholder()
           ? _value.absoluteBoundingBox
           // ignore: cast_nullable_to_non_nullable
@@ -740,9 +740,8 @@ Group _$GroupFromJson(Map<String, dynamic> json) => Group(
       styles: (json['styles'] as Map<String, dynamic>?)?.map(
         (k, e) => MapEntry($enumDecode(_$StyleTypeKeyEnumMap, k), e as String),
       ),
-      componentPropertyReferencesMap:
-          (json['componentPropertyReferencesMap'] as Map<String, dynamic>?)
-              ?.map(
+      componentPropertyProperties:
+          (json['componentPropertyProperties'] as Map<String, dynamic>?)?.map(
         (k, e) => MapEntry(k, e as String),
       ),
       absoluteBoundingBox: json['absoluteBoundingBox'] == null
@@ -796,7 +795,7 @@ Map<String, dynamic> _$GroupToJson(Group instance) => <String, dynamic>{
       'pluginData': instance.pluginData,
       'sharedPluginData': instance.sharedPluginData,
       'rotation': instance.rotation,
-      'componentPropertyReferencesMap': instance.componentPropertyReferencesMap,
+      'componentPropertyProperties': instance.componentPropertyProperties,
       'children':
           instance.children?.map(const NodeJsonConverter().toJson).toList(),
       'locked': instance.locked,

@@ -11,8 +11,8 @@ abstract class _$VectorCWProxy {
 
   Vector visible(bool visible);
 
-  Vector componentPropertyReferencesMap(
-      Map<String, String>? componentPropertyReferencesMap);
+  Vector componentPropertyProperties(
+      Map<String, String>? componentPropertyProperties);
 
   Vector name(String? name);
 
@@ -91,7 +91,7 @@ abstract class _$VectorCWProxy {
   Vector call({
     String? id,
     bool? visible,
-    Map<String, String>? componentPropertyReferencesMap,
+    Map<String, String>? componentPropertyProperties,
     String? name,
     double? rotation,
     dynamic pluginData,
@@ -142,9 +142,9 @@ class _$VectorCWProxyImpl implements _$VectorCWProxy {
   Vector visible(bool visible) => this(visible: visible);
 
   @override
-  Vector componentPropertyReferencesMap(
-          Map<String, String>? componentPropertyReferencesMap) =>
-      this(componentPropertyReferencesMap: componentPropertyReferencesMap);
+  Vector componentPropertyProperties(
+          Map<String, String>? componentPropertyProperties) =>
+      this(componentPropertyProperties: componentPropertyProperties);
 
   @override
   Vector name(String? name) => this(name: name);
@@ -277,7 +277,7 @@ class _$VectorCWProxyImpl implements _$VectorCWProxy {
   Vector call({
     Object? id = const $CopyWithPlaceholder(),
     Object? visible = const $CopyWithPlaceholder(),
-    Object? componentPropertyReferencesMap = const $CopyWithPlaceholder(),
+    Object? componentPropertyProperties = const $CopyWithPlaceholder(),
     Object? name = const $CopyWithPlaceholder(),
     Object? rotation = const $CopyWithPlaceholder(),
     Object? pluginData = const $CopyWithPlaceholder(),
@@ -322,11 +322,11 @@ class _$VectorCWProxyImpl implements _$VectorCWProxy {
           ? _value.visible
           // ignore: cast_nullable_to_non_nullable
           : visible as bool,
-      componentPropertyReferencesMap:
-          componentPropertyReferencesMap == const $CopyWithPlaceholder()
-              ? _value.componentPropertyReferencesMap
+      componentPropertyProperties:
+          componentPropertyProperties == const $CopyWithPlaceholder()
+              ? _value.componentPropertyProperties
               // ignore: cast_nullable_to_non_nullable
-              : componentPropertyReferencesMap as Map<String, String>?,
+              : componentPropertyProperties as Map<String, String>?,
       name: name == const $CopyWithPlaceholder()
           ? _value.name
           // ignore: cast_nullable_to_non_nullable
@@ -490,9 +490,8 @@ extension $VectorCopyWith on Vector {
 Vector _$VectorFromJson(Map<String, dynamic> json) => Vector(
       id: json['id'] as String,
       visible: json['visible'] as bool? ?? true,
-      componentPropertyReferencesMap:
-          (json['componentPropertyReferencesMap'] as Map<String, dynamic>?)
-              ?.map(
+      componentPropertyProperties:
+          (json['componentPropertyProperties'] as Map<String, dynamic>?)?.map(
         (k, e) => MapEntry(k, e as String),
       ),
       name: json['name'] as String?,
@@ -587,7 +586,7 @@ Map<String, dynamic> _$VectorToJson(Vector instance) => <String, dynamic>{
       'pluginData': instance.pluginData,
       'sharedPluginData': instance.sharedPluginData,
       'rotation': instance.rotation,
-      'componentPropertyReferencesMap': instance.componentPropertyReferencesMap,
+      'componentPropertyProperties': instance.componentPropertyProperties,
       'locked': instance.locked,
       'exportSettings': instance.exportSettings,
       'blendMode': _$BlendModeEnumMap[instance.blendMode],
